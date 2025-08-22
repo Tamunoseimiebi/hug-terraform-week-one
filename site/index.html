@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Terraform Challenge - HUG Ibadan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🚀 Terraform 6 Weeks Intensive Challenge</h1>
+  </header>
+
+  <section class="hero">
+    <img src="images/flyer.avif" alt="Terraform Challenge Flyer">
+    <p>Join us from <b>16th August - 20th September, 2025</b><br>
+    Level up your Terraform skills with hands-on projects, community support, and certification prep!</p>
+  </section>
+
+  <!-- Countdown Section -->
+  <section class="countdown">
+    <h2>⏳ Countdown to the End of the Challenge</h2>
+    <p id="timer"></p>
+  </section>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Terraform</a> |
+    <a href="challenge.html">Challenge Details</a>
+  </nav>
+
+  <footer>
+    <p>Powered by HUG Ibadan x HashiCorp Terraform</p>
+  </footer>
+
+  <script>
+    const endDate = new Date("September 20, 2025 23:59:59").getTime();
+    const timer = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = endDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = "🎉 The challenge has ended!";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
