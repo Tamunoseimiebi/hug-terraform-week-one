@@ -5,5 +5,5 @@
 .terraform.lock.hcl
 
 # Secrets
-terraform.tfvars
+secrets.tfvars
 *.env
