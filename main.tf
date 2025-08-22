@@ -25,7 +25,7 @@ resource "netlify_site" "challenge_site" {
 
   repo {
     provider    = "github" 
-    repo_path   = "rotbaj/NetlifyTerraform"
+    repo_path   = "Tamunoseimiebi/hug-terraform-week-one"
     repo_branch = "main" 
     dir         = var.site_files_path
   }
